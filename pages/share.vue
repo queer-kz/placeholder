@@ -38,7 +38,7 @@
       <span :class="$style.title">Петиция</span>
     </a>
 
-    <h2>Логотип</h2>
+    <h2>Брендинг</h2>
 
     <a :href="avatar" download="queer-avatar.png" :class="$style.item" lang="ru">
       <img :src="avatar" alt="Аватар" />
