@@ -26,6 +26,9 @@ const route = useRoute()
 
 useHead({
   title: 'Мы против против петиции «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz',
+  htmlAttrs: {
+    lang: 'ru'
+  },
   meta: [
     {
       name: 'description',

@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.container" role="img" aria-label="Queer.kz logo">
     <span :class="$style.img">
-      <img src="~/assets/logo.png" alt="Queer.kz" />
+      <img src="~/assets/logo.png" />
     </span>
 
     <span :class="$style.inner">

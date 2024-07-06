@@ -13,6 +13,7 @@
       :class="$style.link"
       target="_blank"
       rel="noopener noreferrer"
+      :aria-label="`Читать новость: ${props.title} на сайте`"
     />
   </article>
 </template>
