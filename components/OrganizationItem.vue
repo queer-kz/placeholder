@@ -10,6 +10,7 @@
       :class="$style.link"
       target="_blank"
       rel="noopener noreferrer"
+      :aria-label="`Перейти на сайт организации ${props.title}`"
     />
   </article>
 </template>
