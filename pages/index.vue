@@ -58,9 +58,11 @@
   align-items: center;
   gap: 8px;
   padding: 12px 24px 12px 18px;
-  background-color: #f0f0f0;
+  background-color: #fd94b315;
   color: #000;
   border-radius: 6px;
   text-decoration: none;
+
+  box-shadow: 0 0 0 2px #fd94b3;
 }
 </style>
