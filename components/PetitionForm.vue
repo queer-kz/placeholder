@@ -328,9 +328,6 @@ function generate() {
 <style lang="scss" module>
   .container {
     display: block;
-    border: 6px solid #d6d6d6;
-    border-radius: 12px;
-    padding: 14px;
   }
 
   .signature {
