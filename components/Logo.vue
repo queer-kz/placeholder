@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.container" role="img" aria-label="Queer.kz logo">
     <span :class="$style.img">
-      <img src="~/assets/logo.png" />
+      <img src="~/assets/logo.png" alt="Логотип сайта Queer.kz: Веселый кот" />
     </span>
 
     <span :class="$style.inner">
