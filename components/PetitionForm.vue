@@ -14,11 +14,10 @@
     <FormKit
       v-model="iin"
       type="text"
-      number="integer"
       maxlength="12"
       minlength="12"
       label="Индивидуальный идентификационный номер (ИИН):"
-      validation="required|number|matches:/[0-9]{12}/"
+      validation="required|matches:/[0-9]{12}/"
       :validation-messages="{
         required: 'Пожалуйста заполните ИИН.',
         matches: 'ИИН должен состоять из 12 цифр.',
