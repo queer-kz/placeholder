@@ -14,16 +14,18 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Queer.KZ',
-      meta: [
-        { name: 'description', content: 'My amazing site.' }
-      ],
     }
   },
 
   css: [
     'normalize.css'
   ],
+
+  vite: {
+    build: {
+      cssCodeSplit: false,
+   },
+  },
 
   compatibilityDate: '2024-07-05',
 })
