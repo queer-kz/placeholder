@@ -84,7 +84,7 @@
       <div class="formkit-wrapper">
         <label class="formkit-label">Подпись:</label>
         <div class="formkit-inner">
-          <div :class="$style.signature" ref="signatureContainer">
+          <div :class="$style.signature" ref="signatureContainer" v-if="props.show">
             <ClientOnly>
               <Vue3Signature
                 ref="signature"
@@ -112,6 +112,13 @@
 import FileSaver from 'file-saver'
 import { Document, Packer, Paragraph, TextRun, PageBreak, FrameAnchorType, HorizontalPositionAlign, VerticalPositionAlign, AlignmentType, ImageRun, HorizontalPositionRelativeFrom, VerticalPositionRelativeFrom, TextWrappingType, TextWrappingSide } from 'docx'
 import type { IRunOptions, IParagraphOptions } from 'docx'
+
+const props = defineProps({
+    show: {
+      type: Boolean,
+      required: true,
+    },
+  });
 
 const submitHandler = async () => {
   generate();

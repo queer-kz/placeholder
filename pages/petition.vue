@@ -77,7 +77,7 @@
 
       <!-- Generate -->
       <div :class="{ [$style.hide]: form !== 'generate' }">
-        <PetitionForm />
+        <PetitionForm :show="form === 'generate'" />
       </div>
     </div>
 
