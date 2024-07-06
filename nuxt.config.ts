@@ -18,14 +18,8 @@ export default defineNuxtConfig({
   },
 
   css: [
-    'normalize.css'
+    'normalize.css',
   ],
-
-  vite: {
-    build: {
-      cssCodeSplit: false,
-   },
-  },
 
   compatibilityDate: '2024-07-05',
 })

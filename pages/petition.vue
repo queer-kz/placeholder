@@ -138,6 +138,10 @@ useHead({
 
 </script>
 
+<style>
+@import url('@formkit/themes/genesis');
+</style>
+
 <style lang="scss" module>
   .reason {
     position: relative;

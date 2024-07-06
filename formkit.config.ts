@@ -1,8 +1,7 @@
 import { defineFormKitConfig } from '@formkit/vue'
-import '@formkit/themes/genesis'
+import { ru } from '@formkit/i18n'
 
 export default defineFormKitConfig({
-  // rules: {},
-  // locales: {},
-  // etc. 
+  locales: { ru },
+  locale: 'ru'
 })
