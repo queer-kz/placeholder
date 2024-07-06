@@ -74,10 +74,10 @@
         </ChoseItem>
       </div>
 
-      <!-- Download -->
-
       <!-- Generate -->
-      <PetitionForm v-else-if="form === 'generate'" />
+      <div :class="{ [$style.hide]: form !== 'generate' }">
+        <PetitionForm />
+      </div>
     </div>
 
 
@@ -261,5 +261,9 @@ useHead({
     font-weight: 500;
     font-size: 1.2rem;
     pointer-events: none;
+  }
+
+  .hide {
+    display: none !important;
   }
 </style>
