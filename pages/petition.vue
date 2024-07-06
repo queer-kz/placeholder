@@ -73,6 +73,8 @@ const { copy, copied } = useClipboard({ source: reason })
 const title = 'Инструкция для подачи Жалобы в Министерство культуры и информации Республики Казахстан — Queer.kz'
 const description = 'Пошаговое руководство по заполнению и отправке жалобы на петицию «О запрете пропаганды ЛГБТ+ в Казахстане» через портал «E-Otinish».'
 
+const ogUrl = `https://queer.kz${ogPetition.replace('https://queer.kz', '')}`;
+
 useHead({
   title,
   htmlAttrs: {
@@ -103,7 +105,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `https://queer.kz${ogPetition}`,
+      content: ogUrl,
     },
 
     // Twitter
@@ -129,7 +131,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: `https://queer.kz${ogPetition}`,
+      content: ogUrl,
     }
   ]
 })
