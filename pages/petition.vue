@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Инструкция для подачи Жалобы в Министерство культуры и информации Республики Казахстан</h1>
-    <p>Инструкция основана на тексте (<a href="https://amanbol.kz/instructions2024?utm_source=queer.kz" target="_blank">ссылка</a>) статьи правозащитного проекта AmanBol. Для подачи жалобы вы должны быть резидентом РК и иметь ЭЦП (электронную цифровую подпись).</p>
+    <p>Текст инструкции основан на публикациях проекта AmanBol (<a href="https://amanbol.kz/instructions2024?utm_source=queer.kz" target="_blank">ссылка</a>), но не ассоциирован с ним.</p>
+    <p>Для подачи жалобы вы должны быть резидентом РК и иметь ЭЦП (электронную цифровую подпись).</p>
 
     <!-- Auth -->
     <h2 id="auth">1. Авторизируйтесь на сайте Информационной системы «E-Otinish»</h2>
@@ -115,7 +116,8 @@
 
     <!-- Contacts -->
     <h2 id="contacts">Возникли сложности?</h2>
-    <p>Если у вас возникают вопросы по отправке жалобы, вы можете обратиться к представителям проекта <a href="https://amanbol.kz/?utm_source=queer.kz" target="_blank">AmanBol</a>, написав в Telegram <a href="https://t.me/aziyat_agishev" target="_blank" rel="noreferrer noopener">@aziyat_agishev</a> или Whatsapp <a href="https://wa.me/77051116138" target="_blank" rel="noreferrer noopener">+77051116138</a>.</p>
+    <p>Если у вас возникают вопросы по отправке жалобы, вы можете обратиться к представителям проекта AmanBol (см. контакты в конце <a href="https://amanbol.kz/instructions2024?utm_source=queer.kz" target="_blank">оригинальной инструкции</a>).</p>
+    <p>Вы также можете связаться с нами через Telegram <a href="https://t.me/queer_kz" target="_blank" rel="noreferrer noopener">@queer_kz</a> по вопросам публикации и работы с сайтом.</p>
   </div>
 </template>
 
