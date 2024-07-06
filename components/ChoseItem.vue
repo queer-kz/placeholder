@@ -45,6 +45,7 @@
 
   .description {
     font-size: 1rem;
+    max-width: 440px;
     p {
       margin-bottom: 0;
     }
