@@ -35,6 +35,7 @@
   .container {
     display: flex;
     gap: 24px;
+    max-width: 650px;
 
     @media (max-width: 948px) {
       flex-direction: column;
@@ -45,7 +46,6 @@
 
   .description {
     font-size: 1rem;
-    max-width: 440px;
     p {
       margin-bottom: 0;
     }
