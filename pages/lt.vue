@@ -57,6 +57,8 @@ import ogLt from '~/assets/social/og-lt.png'
 const title = 'Mes prieš peticiją „Dėl LGBT+ propagandos draudimo Kazachstane“ — Queer.kz'
 const description = 'Peticija pažeidžia Kazachstano nacionalinę teisėkūrą ir tarptautinius įsipareigojimus bei turi būti pašalinta iš svarstymo.'
 
+const ogUrl = `https://queer.kz${ogLt.replace('https://queer.kz', '')}`;
+
 useHead({
   title,
   htmlAttrs: {
@@ -97,7 +99,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `https://queer.kz${ogLt}`,
+      content: ogUrl,
     },
 
     // Twitter
@@ -123,7 +125,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: `https://queer.kz${ogLt}`,
+      content: ogUrl,
     }
   ]
 })

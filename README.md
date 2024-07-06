@@ -1,3 +1,3 @@
-# Placeholder's website
+# Queer.kz website
 
-This repository serves as a simple portfolio website with no particular aim other than sharing playlists and social media links with friends.
+The source code of the Queer.kz project is open to confirm the transparency of data processing. We do not collect, store, or share form data with third parties.

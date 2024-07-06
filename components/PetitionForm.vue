@@ -1,7 +1,10 @@
 <template>
+  <!-- Исходный код генератора файла Жалоба.docx -->
+  <!-- Генераця файла осуществляется исключительно в браузере -->
+  <!-- Никакого взаимодействия с backend'ом, внешними ресурсами и прочем нету -->
   <FormKit
     type="form"
-    id="registration-example"
+    id="petition-form"
     :form-class="$style.container"
     submit-label="Скачать Жалоба.docx"
     @submit="submitHandler"

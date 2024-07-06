@@ -61,6 +61,8 @@ import ogRu from '~/assets/social/og-ru.png'
 const title = 'Мы против петиции «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz'
 const description = 'Петиция нарушает национальное законодательство и международные обязательства Казахстана и должна быть снята с рассмотрения.'
 
+const ogUrl = `https://queer.kz${ogRu.replace('https://queer.kz', '')}`;
+
 useHead({
   title,
   htmlAttrs: {
@@ -101,7 +103,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `https://queer.kz${ogRu}`,
+      content: ogUrl,
     },
 
     // Twitter
@@ -127,7 +129,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: `https://queer.kz${ogRu}`,
+      content: ogUrl,
     }
   ]
 })

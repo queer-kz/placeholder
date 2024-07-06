@@ -19,12 +19,12 @@
 
     <!-- Abuse -->
     <h2 id="file">2. Заполните жалобу</h2>
-    <p>Мы подготовили инструмент для быстрого заполнения жалобы, предлагаем вам воспользоваться им*. Ознакомиться с текстом жалобы либо заполнить её самостоятельно можно скачав файл «Жалоба» по ссылке на <a href="https://docs.google.com/document/d/18lPHbafuCCOml1Y-1Uba0EY91iMIz_No/edit" rel="noreferrer noopener" target="_blank">Google.Диск</a> или с <a href="https://disk.yandex.ru/i/EHU8oMYppWDvbg" rel="noreferrer noopener" target="_blank">Яндекс.Диск</a>.</p>
+    <p>Мы подготовили инструмент для быстрого заполнения жалобы, предлагаем вам воспользоваться им. Ознакомиться с текстом жалобы либо заполнить её самостоятельно можно скачав файл «Жалоба» по ссылке на <a href="https://docs.google.com/document/d/18lPHbafuCCOml1Y-1Uba0EY91iMIz_No/edit" rel="noreferrer noopener" target="_blank">Google.Диск</a> или с <a href="https://disk.yandex.ru/i/EHU8oMYppWDvbg" rel="noreferrer noopener" target="_blank">Яндекс.Диск</a>.</p>
     <p>Вам потребуется заполнить ваши данные - ФИО, ИИН, адрес, контакты, дату подачи жалобы, по возможности подпись. Сохраните файл (важно, что бы файл оставался в формате .docx), он понадобится в следующем шаге.</p>
+    <p>Вся работа с вашими данными осуществляется исключительно в браузере. Мы не сохраняем, не обрабатываем и не передаем ваши данные третим лицам. Вы можете убедиться в этом ознакомившись с исходным кодом сайта (<a href="https://github.com/queer-kz/placeholder/blob/main/components/PetitionForm.vue" rel="noreferrer noopener" target="_blank">Github</a>).</p>
 
     <PetitionForm />
 
-    <p>* - вся работа с вашими данными осуществляется исключительно в браузере. Мы не сохраняем, не обрабатываем и не передаем ваши данные третим лицам.</p>
 
     <!-- Fill -->
     <h2 id="fill">3. Заполните форму обращения</h2>

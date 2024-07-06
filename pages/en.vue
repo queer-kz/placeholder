@@ -58,6 +58,8 @@ import ogEn from '~/assets/social/og-en.png'
 const title = 'We are against the petition "On banning LGBT+ propaganda in Kazakhstan"'
 const description = 'The petition violates Kazakhstan’s national legislation and international commitments and should be withdrawn from consideration.'
 
+const ogUrl = `https://queer.kz${ogEn.replace('https://queer.kz', '')}`;
+
 useHead({
   title,
   htmlAttrs: {
@@ -98,7 +100,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `https://queer.kz${ogEn}`,
+      content: ogUrl,
     },
 
     // Twitter
@@ -124,7 +126,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: `https://queer.kz${ogEn}`,
+      content: ogUrl,
     }
   ]
 })
