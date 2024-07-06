@@ -20,7 +20,8 @@
     <!-- Abuse -->
     <h2 id="file">2. Заполните жалобу</h2>
     <p>Мы подготовили инструмент для быстрого заполнения жалобы, предлагаем вам воспользоваться им. Ознакомиться с текстом жалобы либо заполнить её самостоятельно можно скачав файл «Жалоба» по ссылке на <a href="https://docs.google.com/document/d/18lPHbafuCCOml1Y-1Uba0EY91iMIz_No/edit" rel="noreferrer noopener" target="_blank">Google.Диск</a> или с <a href="https://disk.yandex.ru/i/EHU8oMYppWDvbg" rel="noreferrer noopener" target="_blank">Яндекс.Диск</a>.</p>
-
+    <p v-if="form === 'chose'"><strong>Выберите способ заполнения жалобы:</strong></p>
+    <p v-else><strong>Заполните ваши данные для составления жалобы:</strong></p>
     <div :class="$style.form">
       <!-- Chose -->
       <div v-if="form === 'chose'">
