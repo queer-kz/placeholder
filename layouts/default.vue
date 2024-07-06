@@ -10,7 +10,7 @@
         <slot />
       </main>
 
-      <Socials v-if="homeRoutes.includes(route.name)" :class="$style.news" />
+      <Socials v-if="homeRoutes.includes(String(route.name))" :class="$style.news" />
     </div>
 
     <!-- Footer -->
@@ -22,7 +22,7 @@
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const homeRoutes = ['index', 'en', 'lt']
+const homeRoutes = ['index', 'share', 'en', 'lt']
 </script>
 
 <style lang="scss" module>
