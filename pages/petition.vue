@@ -65,13 +65,74 @@
 
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core'
+import ogPetition from '~/assets/social/og-petition.png'
 
 const reason = '09.06.2024 г. на портале «E-Petition.kz» петиция «Мы против открытой и скрытой пропаганды ЛГБТ в РК!» собрала 50 000 подписей. Одним из ее требований - введение закона о запрете открытой и скрытой пропаганды ЛГБТ и наказания за подобные действия на законном уровне. Согласно п. 3 ст. 90-2 Административного процедурно-процессуального кодекса РК, предметом петиции не могут быть вопросы: … которые могут повлечь за собой нарушение прав и свобод человека. Согласно ст. 9 Административного процедурно-процессуального кодекса РК, каждый вправе в порядке, установленном настоящим Кодексом, обратиться в административный орган, к должностному лицу или в суд за защитой нарушенных или оспариваемых прав, свобод или законных интересов. Обращаюсь в уполномоченный государственный орган в отношении рассмотрения петиции «Мы против открытой и скрытой пропаганды ЛГБТ в РК!» с требованием признать данную петицию, нарушающей права и свободы человека, и, следовательно, снять данную петицию с рассмотрения уполномоченным государственным органом. Полный текст с обоснованием жалобы прикрепляю в файле Жалоба'
 const { copy, copied } = useClipboard({ source: reason })
 
+const title = 'Инструкция для подачи Жалобы в Министерство культуры и информации Республики Казахстан — Queer.kz'
+const description = 'Пошаговое руководство по заполнению и отправке жалобы на петицию «О запрете пропаганды ЛГБТ+ в Казахстане» через портал «E-Otinish».'
+
 useHead({
-  title: 'Инструкция для подачи Жалобы в Министерство культуры и информации Республики Казахстан — Queer.kz',
-});
+  title,
+  htmlAttrs: {
+    lang: 'ru'
+  },
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://queer.kz/petition'
+    }
+  ],
+  meta: [
+    {
+      name: 'description',
+      content: description
+    },
+    {
+      property: 'og:type',
+      content: 'article',
+    },
+    {
+      property: 'og:title',
+      content: title,
+    },
+    {
+      property: 'og:description',
+      content: description,
+    },
+    {
+      property: 'og:image',
+      content: `https://queer.kz${ogPetition}`,
+    },
+
+    // Twitter
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      property: 'twitter:domain',
+      content: 'queer.kz',
+    },
+    {
+      property: 'twitter:url',
+      content: 'https://queer.kz/petition'
+    },
+    {
+      name: 'twitter:title',
+      content: title
+    },
+    {
+      name: 'twitter:description',
+      content: description
+    },
+    {
+      name: 'twitter:image',
+      content: `https://queer.kz${ogPetition}`,
+    }
+  ]
+})
 
 </script>
 

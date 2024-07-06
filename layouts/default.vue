@@ -10,7 +10,7 @@
         <slot />
       </main>
 
-      <Socials v-if="route.name === 'index'" :class="$style.news" />
+      <Socials v-if="homeRoutes.includes(route.name)" :class="$style.news" />
     </div>
 
     <!-- Footer -->
@@ -19,39 +19,10 @@
 </template>
 
 <script lang="ts" setup>
-import ogRu from '~/assets/social/og-ru.png'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-
-useHead({
-  title: 'Мы против «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz',
-  htmlAttrs: {
-    lang: 'ru'
-  },
-  meta: [
-    {
-      name: 'description',
-      content: 'Петиция нарушает национальное законодательство и международные обязательства Казахстана и должна быть снята с рассмотрения.'
-    },
-    {
-      property: 'og:type',
-      content: 'article',
-    },
-    {
-      property: 'og:title',
-      content: 'Мы против петиции «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz',
-    },
-    {
-      property: 'og:description',
-      content: 'Петиция нарушает национальное законодательство и международные обязательства Казахстана и должна быть снята с рассмотрения.',
-    },
-    {
-      property: 'og:image',
-      content: ogRu,
-    }
-  ]
-})
+const homeRoutes = ['index', 'en', 'lt']
 </script>
 
 <style lang="scss" module>

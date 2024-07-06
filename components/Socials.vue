@@ -6,10 +6,15 @@
 
     <!-- Пресса -->
     <section>
-      <h2>Пресса</h2>
+      <h2>
+        <template v-if="route.name === 'en'">Press</template>
+        <template v-else-if="route.name === 'lt'">Publikacijos</template>
+        <template v-else>Пресса</template>
+      </h2>
 
       <!-- Orda -->
       <NewsItem
+        lang="ru"
         title="Рассылали и призывали подписывать: кто стоит за 50 тысячами голосов против ЛГБТ?"
         :poster="orda"
         href="https://orda.kz/rassylali-i-prizyvali-podpisyvat-kto-stoit-za-50-tysjachami-golosov-protiv-lgbt-387860/"
@@ -18,7 +23,11 @@
 
     <!-- Организации -->
     <section>
-      <h2>Организации</h2>
+      <h2>
+        <template v-if="route.name === 'en'">Organizations</template>
+        <template v-else-if="route.name === 'lt'">Organizacijos</template>
+        <template v-else>Организации</template>
+      </h2>
       <OrganizationItem
         title="AmanBol"
         :poster="amanBol"
@@ -28,7 +37,15 @@
 
     <!-- Поделиться -->
     <section :class="$style.contact">
-      <p>Если вы хотите поделиться публикацией в СМИ или разместиться в разделе организаций, свяжитесь с нами в Telegram <a href="https://t.me/queer_kz" target="_blank" rel="noreferrer noopener">@queer_kz</a>.</p>
+      <p v-if="route.name === 'en'">
+        If you would like to share a publication in the media or be featured in the organizations section, please contact us on Telegram at <a href="https://t.me/queer_kz" target="_blank" rel= "noreferrer noopener">@queer_kz</a>.
+      </p>
+      <p v-else-if="route.name === 'lt'">
+        Jei norite pasidalinti publikacija žiniasklaidoje arba būti patalpinti organizacijų skyriuje, susisiekite su mumis Telegram <a href="https://t.me/queer_kz" target="_blank" rel= "noreferrer noopener">@queer_kz</a>.
+      </p>
+      <p v-else>
+        Если вы хотите поделиться публикацией в СМИ или разместиться в разделе организаций, свяжитесь с нами в Telegram <a href="https://t.me/queer_kz" target="_blank" rel="noreferrer noopener">@queer_kz</a>.
+      </p>
     </section>
   </div>
 </template>
@@ -36,6 +53,8 @@
 <script lang="ts" setup>
 import orda from '~/assets/press/orda.jpg'
 import amanBol from '~/assets/organizations/aman-bol.png'
+
+const route = useRoute()
 </script>
 
 <style lang="scss" module>

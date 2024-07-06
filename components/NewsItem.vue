@@ -1,5 +1,5 @@
 <template>
-  <article :class="$style.container">
+  <article :class="$style.container" :lang="props.lang">
     <img
       :src="props.poster"
       :alt="props.title"
@@ -20,6 +20,10 @@
 
 <script lang="ts" setup>
   const props = defineProps({
+    lang: {
+      type: String,
+      required: true,
+    },
     poster: {
       type: String,
       required: true,

@@ -1,5 +1,5 @@
 <template>
-  <nav :class="$style.container">
+  <nav :class="$style.container" lang="ru">
     <NuxtLink :class="$style.logo" to="/">
       <Logo />
     </NuxtLink>
