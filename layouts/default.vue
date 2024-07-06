@@ -25,7 +25,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 useHead({
-  title: 'Мы против против петиции «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz',
+  title: 'Мы против «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz',
   htmlAttrs: {
     lang: 'ru'
   },
@@ -40,7 +40,7 @@ useHead({
     },
     {
       property: 'og:title',
-      content: 'Мы против против петиции «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz',
+      content: 'Мы против петиции «О запрете пропаганды ЛГБТ+ в Казахстане» — Queer.kz',
     },
     {
       property: 'og:description',
