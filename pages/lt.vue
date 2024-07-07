@@ -26,6 +26,8 @@
       <span>Perskaitykite originalų straipsnį</span>
     </NuxtLink>
 
+    <p>Jūsų patogumui mes paruošėm <NuxtLink to="/share">brand book</NuxtLink> su paruoštais baneriais, Instagram stories ir kt., kuriuos galite naudoti savo publikacijoms.</p>
+
     <h3 id="organizations">Jei esate užsienio pilietis, organizacija ar influenser</h3>
     <p>Jūs galite atlikti svarbų vaidmenį remiant LGBT+ teises Kazachstane ir pasisakyti prieš diskriminacines iniciatyvas. Štai keletas būdų, kaip galite padėti:</p>
     <ul>

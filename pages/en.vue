@@ -27,6 +27,8 @@
       <span>Read the original article</span>
     </NuxtLink>
 
+    <p>For your convenience, we have prepared a <NuxtLink to="/share">brand book</NuxtLink> with ready-to-use banners, Instagram stories, etc., that you can use for your publications.</p>
+
     <h3 id="organizations">If you are a foreign citizen, organization, or influencer</h3>
     <p>You can play an important role in supporting the rights of LGBTIQA+ individuals in Kazakhstan and opposing discriminatory initiatives. Here are several ways you can help:</p>
     <ul>
