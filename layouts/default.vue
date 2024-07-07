@@ -39,7 +39,7 @@ const homeRoutes = ['index', 'share', 'en', 'lt']
     --border-color: #d6d6d6;
     --primary-color: #e66199;
     --fk-color-primary: #e66199;
-    
+
     font-family: 'Rubik', sans-serif;
     background-color: var(--main-background);
     color: var(--text-color);
@@ -51,17 +51,7 @@ const homeRoutes = ['index', 'share', 'en', 'lt']
       --divider-color: #757575;
       --border-color: #e9e9e9;
       --primary-color: #fd94b3;
-  
-      --fk-color-help: var(--second-text-color);
-      --fk-color-input: var(--text-color);
-      --fk-color-icon: var(--second-text-color);
     }
-  }
-
-  body {
-    font-family: 'Rubik', sans-serif;
-    background-color: var(--main-background);
-    color: var(--text-color);
   }
 
   a {

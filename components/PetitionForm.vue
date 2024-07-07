@@ -332,9 +332,24 @@ function generate() {
 }
 </script>
 
+<style>
+@import url('@formkit/themes/genesis');
+</style>
+
 <style lang="scss" module>
   .container {
     display: block;
+  }
+
+  :global(:root) {
+    --fk-color-primary: #e66199;
+
+    @media (prefers-color-scheme: dark) {
+      --fk-color-primary: var(--primary-color);
+      --fk-color-help: var(--second-text-color);
+      --fk-color-input: var(--text-color);
+      --fk-color-icon: var(--second-text-color);
+    }
   }
 
   .signature {
