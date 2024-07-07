@@ -33,6 +33,11 @@
         :poster="amanBol"
         href="https://amanbol.kz/?utm_source=queer.kz"
       />
+      <OrganizationItem
+        title="RSide"
+        :poster="rside"
+        href="https://www.instagram.com/r.side_astana/?utm_source=queer.kz"
+      />
     </section>
 
     <!-- Поделиться -->
@@ -53,6 +58,7 @@
 <script lang="ts" setup>
 import orda from '~/assets/press/orda.jpg'
 import amanBol from '~/assets/organizations/aman-bol.png'
+import rside from '~/assets/organizations/rside.png'
 
 const route = useRoute()
 </script>

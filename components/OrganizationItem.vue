@@ -35,8 +35,9 @@
 <style lang="scss" module>
   .container {
     position: relative;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    margin: 0 4px 4px 0;
   }
 
   .picture {
@@ -44,6 +45,7 @@
     aspect-ratio: 100 / 80;
     height: auto;
     border-radius: 8px;
+    border: 1px solid #f0f0f0;
   }
 
   .link {
