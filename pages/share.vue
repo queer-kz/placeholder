@@ -136,11 +136,12 @@ useHead({
   flex-direction: column;
   margin: 0 1rem 1rem 0;
   text-decoration: none;
-  color: #000;
-
+  color: var(--text-color);
+  
   img {
     width: 180px;
-    border: 4px solid #f0f0f0;
+    border: 4px solid var(--border-color);
+    background-color: #fff;
     border-radius: 6px;
   }
 

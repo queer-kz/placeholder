@@ -28,10 +28,10 @@
       <div v-if="form === 'chose'">
 
         <!-- Generate -->
-        <ChoseItem color="#832373" @click="form = 'generate'">
+        <ChoseItem :class="$style.itemGenerate" @click="form = 'generate'">
           <template #icon>
             <svg fill="none" viewBox="0 0 24 24">
-              <g stroke="#832373" stroke-width="1.5">
+              <g stroke="var(--color)" stroke-width="1.5">
                 <path d="m18.18 8.03933.4635-.46344c.7678-.76785 2.0128-.76785 2.7806 0 .7679.76785.7679 2.01279 0 2.78061l-.4634.4635m-2.7807-2.78067s.058.98481.9269 1.85376c.869.86891 1.8538.92691 1.8538.92691m-2.7807-2.78067-4.2606 4.26057c-.2886.2886-.4329.4329-.557.592-.1463.1877-.2718.3908-.3742.6056-.0868.1822-.1514.3757-.2804.7629l-.4132 1.2396-.1337.401m8.7998-5.081-4.2606 4.2606c-.2886.2886-.4329.4329-.592.557-.1877.1463-.3908.2718-.6056.3742-.1822.0868-.3757.1514-.7629.2804l-1.2396.4132-.401.1337m0 0-.4011.1337c-.1905.0635-.4006.0139-.5426-.1281s-.1916-.3521-.1281-.5426l.1337-.4011m.9381.9381-.9381-.9381"/>
                 <g stroke-linecap="round">
                   <path d="m8 13h2.5"/>
@@ -55,10 +55,10 @@
         <br />
 
         <!-- Download -->
-        <ChoseItem color="#1c274c" @click="download">
+        <ChoseItem :class="$style.itemDownload" @click="download">
           <template #icon>
             <svg fill="none" viewBox="0 0 24 24">
-              <g stroke="#1c274c" stroke-width="1.5">
+              <g stroke="var(--color)" stroke-width="1.5">
                 <path d="m12 7v7m0 0 3-3m-3 3-3-3" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="m16 17h-4-4" stroke-linecap="round"/>
                 <path d="m2 12c0-4.71405 0-7.07107 1.46447-8.53553 1.46446-1.46447 3.82148-1.46447 8.53553-1.46447 4.714 0 7.0711 0 8.5355 1.46447 1.4645 1.46446 1.4645 3.82148 1.4645 8.53553 0 4.714 0 7.0711-1.4645 8.5355-1.4644 1.4645-3.8215 1.4645-8.5355 1.4645-4.71405 0-7.07107 0-8.53553-1.4645-1.46447-1.4644-1.46447-3.8215-1.46447-8.5355z"/>
@@ -211,7 +211,7 @@ useHead({
   .reason {
     position: relative;
     overflow: hidden;
-    border: 6px solid #d6d6d6;
+    border: 6px solid var(--border-color);
     border-radius: 12px;
     user-select: all;
     margin: 4px 0;
@@ -230,7 +230,7 @@ useHead({
       right: 0;
       content: '';
       height: 24px;
-      background: linear-gradient(var(--angle), rgba(0, 0, 0, 0) 0%, #fff 80%);
+      background: linear-gradient(var(--angle), rgba(0, 0, 0, 0) 0%, var(--main-background) 80%);
       pointer-events: none;
     }
 
@@ -247,7 +247,7 @@ useHead({
 
   .form {
     display: block;
-    border: 6px solid #d6d6d6;
+    border: 6px solid var(--border-color);
     border-radius: 12px;
     padding: 14px;
   }
@@ -264,6 +264,30 @@ useHead({
     font-weight: 500;
     font-size: 1.2rem;
     pointer-events: none;
+
+    @media (prefers-color-scheme: dark) {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .itemGenerate {
+    --color: #832373;
+    --background-color: #8323730b;
+
+    @media (prefers-color-scheme: dark) {
+      --color: #d527b8;
+      --background-color: #d527b815;
+    }
+  }
+
+  .itemDownload {
+    --color: #1c274c;
+    --background-color: #1c274c0b;
+
+    @media (prefers-color-scheme: dark) {
+      --color: #7c4dff;
+      --background-color: #4400ff15;
+    }
   }
 
   .hide {

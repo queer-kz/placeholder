@@ -17,7 +17,7 @@
     gap: 12px;
     user-select: none;
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
   }
 
   .inner {

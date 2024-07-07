@@ -79,7 +79,7 @@ const route = useRoute()
         display: inline-block;
         width: 6px;
         height: 6px;
-        background-color: #000;
+        background-color: var(--divider-color);
         border-radius: 50%;
       }
     }
@@ -89,14 +89,14 @@ const route = useRoute()
     &::before {
       content: '';
       display: block;
-      border-bottom: #777777 1px solid;
+      border-bottom: var(--divider-color) 1px solid;
       margin: 16px 0;
     }
 
-    color: #777777;
+    color: var(--second-text-color);
     
     a {
-      color: #777777;
+      color: var(--second-text-color);
       text-decoration: none;
       font-weight: 500;
     }

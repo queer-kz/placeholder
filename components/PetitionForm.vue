@@ -345,6 +345,7 @@ function generate() {
     width: 100%;
     height: 180px;
     margin-bottom: 24px;
+    background-color: #fff !important;
 
     .signatureClear {
       position: absolute;

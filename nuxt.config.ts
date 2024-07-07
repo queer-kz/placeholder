@@ -18,6 +18,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', sizes: '16x16', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/x-icon', sizes: '32x32', href: '/favicon.middle.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon.apple.png' },
+      ],
+      meta: [
+        { name: 'color-scheme', content: 'light dark' },
       ]
     },
   },

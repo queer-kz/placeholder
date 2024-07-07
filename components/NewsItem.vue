@@ -42,8 +42,10 @@
 <style lang="scss" module>
   .container {
     position: relative;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    max-width: 300px;
+    margin: 0 12px 12px 0;
   }
 
   .picture {

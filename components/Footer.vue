@@ -18,12 +18,12 @@
 
   .copyright {
     font-weight: 500;
-    color: #777777;
+    color: var(--second-text-color);
   }
 
   .disclaimer {
     font-size: 14px;
-    color: #777777;
+    color: var(--second-text-color);
     margin: 16px auto 0 auto;
     max-width: calc(min(1340px, 100vw) - 62px);
     text-align: justify;

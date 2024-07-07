@@ -13,7 +13,7 @@
     height: 62px;
     padding-top: 2px;
     margin-bottom: 12px;
-    border-bottom: #777777 1px solid;
+    border-bottom: var(--divider-color) 1px solid;
   }
 
   .logo {

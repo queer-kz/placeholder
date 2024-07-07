@@ -1,9 +1,6 @@
 <template>
   <div :class="$style.container">
-    <button :class="$style.button" :style="{
-      color: props.color,
-      backgroundColor: props.color + '0b',
-    }">
+    <button :class="$style.button">
       <div :class="$style.inner">
         <!-- Icon -->
         <slot name="icon" />
@@ -20,16 +17,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-  const props = defineProps({
-    color: {
-      type: String,
-      required: true,
-    },
-  });
-</script>
-
 
 <style lang="scss" module>
   .container {
@@ -52,7 +39,6 @@
   }
 
   .button {
-    background: none;
     border: none;
     cursor: pointer;
     padding: 12px;
@@ -60,6 +46,9 @@
     min-width: 180px;
     max-width: 180px;
     border-radius: 8px;
+
+    color: var(--color);
+    background-color: var(--background-color);
 
     @media (max-width: 948px) {
       min-width: 100%;
