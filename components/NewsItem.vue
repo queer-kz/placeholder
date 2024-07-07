@@ -45,7 +45,10 @@
     display: inline-flex;
     flex-direction: column;
     max-width: 300px;
-    margin: 0 12px 12px 0;
+
+    @media (max-width: 948px) {
+      margin: 0 12px 6px 0;
+    }
   }
 
   .picture {
