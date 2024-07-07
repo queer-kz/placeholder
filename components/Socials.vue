@@ -12,6 +12,14 @@
         <template v-else>Пресса</template>
       </h2>
 
+      <!-- Парни ПЛЮС -->
+      <NewsItem
+        lang="ru"
+        title="В Казахстане прошло первое заседание по петиции против «ЛГБТ-пропаганды»"
+        :poster="parniPlus"
+        href="https://parniplus.com/news/kazakhstan-homophobic-petition-discussion/?utm_source=queer.kz"
+      />
+
       <!-- Orda -->
       <NewsItem
         lang="ru"
@@ -57,6 +65,7 @@
 
 <script lang="ts" setup>
 import orda from '~/assets/press/orda.jpg'
+import parniPlus from '~/assets/press/parni-plus.png'
 import amanBol from '~/assets/organizations/aman-bol.png'
 import rside from '~/assets/organizations/rside.png'
 

@@ -53,6 +53,7 @@
     aspect-ratio: 1200 / 630;
     height: auto;
     border-radius: 8px;
+    box-shadow: 0 0 0 1px var(--border-color);
   }
 
   .title {
