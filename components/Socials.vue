@@ -46,6 +46,16 @@
         :poster="rside"
         href="https://www.instagram.com/r.side_astana/?utm_source=queer.kz"
       />
+      <OrganizationItem
+        title="Education Community"
+        :poster="eduCommunity"
+        href="https://www.instagram.com/edu.community.kz/?utm_source=queer.kz"
+      />
+      <OrganizationItem
+        title="Feminita"
+        :poster="feminita"
+        href="https://taplink.cc/feminita?utm_source=queer.kz"
+      />
     </section>
 
     <!-- Поделиться -->
@@ -68,6 +78,8 @@ import orda from '~/assets/press/orda.jpg'
 import parniPlus from '~/assets/press/parni-plus.png'
 import amanBol from '~/assets/organizations/aman-bol.png'
 import rside from '~/assets/organizations/rside.png'
+import eduCommunity from '~/assets/organizations/edu-community.png'
+import feminita from '~/assets/organizations/feminita.png'
 
 // const route = useRoute()
 const route = { name: 'ru' }
