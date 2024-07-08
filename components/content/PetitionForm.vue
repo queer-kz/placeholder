@@ -6,7 +6,7 @@
     type="form"
     id="petition-form"
     :form-class="$style.container"
-    submit-label="Скачать Жалоба.docx"
+    :submit-label="submit$"
     @submit="submitHandler"
     :actions="true"
     :config="{ validationVisibility: 'blur' }"
@@ -16,75 +16,74 @@
       type="text"
       maxlength="12"
       minlength="12"
-      label="Индивидуальный идентификационный номер (ИИН):"
+      :label="iin$"
       validation="required|matches:/[0-9]{12}/"
       :validation-messages="{
-        required: 'Пожалуйста заполните ИИН.',
-        matches: 'ИИН должен состоять из 12 цифр.',
-        number: 'ИИН должен состоять из 12 цифр.'
+        required: required$,
+        matches: iinIncorrect$,
       }"
     />
 
     <FormKit
       v-model="name"
       type="text"
-      label="Фамилия, имя, отчество (при наличии):"
+      :label="name$"
       validation="required"
       :validation-messages="{
-        required: 'Пожалуйста заполните свою фамилию, имя и отчество (при наличии).',
+        required: required$,
       }"
     />
 
     <FormKit
       v-model="address"
       type="text"
-      label="Почтовый адрес:"
+      :label="address$"
       validation="required"
       :validation-messages="{
-        required: 'Пожалуйста заполните ваш почтовый адрес.',
+        required: required$,
       }"
-      help="Укажите вашу область, населенный пункт, улицу, дом, подъезд и квартиру как почтовый адрес."
+      :help="addressHelp$"
     />
 
     <FormKit
       v-model="date"
       type="date"
-      label="Дата отправки жалобы:"
+      :label="date$"
       validation="required|date_after:2024-06-01"
       :validation-messages="{
-        required: 'Это поле обязательно для заполнения.',
-        date_after: 'Дата не может быть в прошлом.',
+        required: required$,
+        date_after: dateIncorrect$,
       }"
     />
 
     <FormKit
       v-model="phone"
       type="tel"
-      label="Контактный телефон:"
+      :label="phone$"
       placeholder="+7 777 777 77 77"
       validation="required"
       :validation-messages="{
-        required: 'Это поле обязательно для заполнения.',
+        required: required$,
       }"
     />
 
     <FormKit
       v-model="email"
       type="email"
-      label="Контактный email:"
+      :label="email$"
       placeholder="contact-email@gmail.com"
       validation="required|email"
       :validation-messages="{
-        required: 'Это поле обязательно для заполнения.',
-        email: 'Введите корректный адрес электронной почты.',
+        required: required$,
+        email: emailIncorrect$,
       }"
     />
 
     <div class="formkit-outer">
       <div class="formkit-wrapper">
-        <label class="formkit-label">Подпись:</label>
+        <label class="formkit-label">{{ signature$ }}</label>
         <div class="formkit-inner">
-          <div :class="$style.signature" ref="signatureContainer" v-if="props.show">
+          <div :class="$style.signature" ref="signatureContainer">
             <ClientOnly>
               <Vue3Signature
                 ref="signature"
@@ -96,13 +95,13 @@
             </ClientOnly>
 
             <span :class="$style.signatureClear" role="button" @click="clearSignature">
-              Очистить подпись
+              {{ signatureClear$ }}
             </span>
           </div>
         </div>
       </div>
       <div class="formkit-help">
-        По возможности, подпишите документ с помощью мыши или пальца на экране.
+        {{ signatureHelp$ }}
       </div>
     </div>
   </FormKit>
@@ -114,11 +113,24 @@ import { Document, Packer, Paragraph, TextRun, PageBreak, FrameAnchorType, Horiz
 import type { IRunOptions, IParagraphOptions } from 'docx'
 
 const props = defineProps({
-    show: {
-      type: Boolean,
-      required: true,
-    },
-  });
+  downloadFileName: String,
+
+  submit$: String,
+  required$: String,
+  iin$: String,
+  iinIncorrect$: String,
+  name$: String,
+  address$: String,
+  addressHelp$: String,
+  date$: String,
+  dateIncorrect$: String,
+  phone$: String,
+  email$: String,
+  emailIncorrect$: String,
+  signature$: String,
+  signatureClear$: String,
+  signatureHelp$: String,
+});
 
 const submitHandler = async () => {
   generate();
@@ -327,29 +339,14 @@ function generate() {
   });
 
   Packer.toBlob(doc).then((blob) => {
-    FileSaver.saveAs(blob, 'Жалоба.docx')
+    FileSaver.saveAs(blob, props.downloadFileName)
   });
 }
 </script>
 
-<style>
-@import url('@formkit/themes/genesis');
-</style>
-
 <style lang="scss" module>
   .container {
     display: block;
-  }
-
-  :global(:root) {
-    --fk-color-primary: #e66199;
-
-    @media (prefers-color-scheme: dark) {
-      --fk-color-primary: var(--primary-color);
-      --fk-color-help: var(--second-text-color);
-      --fk-color-input: var(--text-color);
-      --fk-color-icon: var(--second-text-color);
-    }
   }
 
   .signature {

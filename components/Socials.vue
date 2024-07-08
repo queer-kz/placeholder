@@ -69,7 +69,8 @@ import parniPlus from '~/assets/press/parni-plus.png'
 import amanBol from '~/assets/organizations/aman-bol.png'
 import rside from '~/assets/organizations/rside.png'
 
-const route = useRoute()
+// const route = useRoute()
+const route = { name: 'ru' }
 </script>
 
 <style lang="scss" module>

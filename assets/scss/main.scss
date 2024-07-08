@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('~/assets/fonts/rubik-wght.ttf') format('truetype');
+}
+
+:root {
+  --main-background: #fff;
+  --text-color: #000;
+  --second-text-color: #757575;
+  --divider-color: #000;
+  --border-color: #d6d6d6;
+  --primary-color: #e66199;
+  --fk-color-primary: #e66199;
+
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--main-background);
+  color: var(--text-color);
+
+  @media (prefers-color-scheme: dark) {
+    --main-background: #1e1e1e;
+    --text-color: #ffffff;
+    --second-text-color: #bdbdbd;
+    --divider-color: #757575;
+    --border-color: #e9e9e9;
+    --primary-color: #fd94b3;
+  }
+}
+
+a {
+  color: var(--primary-color);
+}

@@ -10,6 +10,8 @@
   "dependencies": {
     "@formkit/nuxt": "^1.6.5",
     "@formkit/themes": "^1.6.5",
+    "@nuxt/content": "^2.13.1",
+    "@nuxt/image": "^1.7.0",
     "@vueuse/core": "^10.11.0",
     "docx": "^8.5.0",
     "file-saver": "^2.0.5",

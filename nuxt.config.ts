@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@formkit/nuxt', "nuxt-gtag"],
+  modules: ['@formkit/nuxt', "nuxt-gtag", "@nuxt/content", "@nuxt/image"],
+
+  pages: true,
   
   formkit: {
     autoImport: true
@@ -8,6 +10,19 @@ export default defineNuxtConfig({
 
   gtag: {
     id: 'G-LH6JL5VWWS'
+  },
+  
+  content: {
+    contentHead: false,
+    documentDriven: true,
+    locales: [],
+    defaultLocale: 'ru'
+  },
+
+  nitro: {
+    prerender: {
+      routes: ['/', '/en', '/lt', '/petition', '/share']
+    }
   },
 
   app: {
@@ -21,12 +36,14 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: 'color-scheme', content: 'light dark' },
-      ]
+      ],
+      titleTemplate: '%s — Queer.kz'
     },
   },
 
   css: [
     'normalize.css',
+    '~/assets/scss/main.scss',
   ],
 
   compatibilityDate: '2024-07-05',

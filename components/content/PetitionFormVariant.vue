@@ -3,20 +3,25 @@
     <button :class="$style.button">
       <div :class="$style.inner">
         <!-- Icon -->
-        <slot name="icon" />
+        <IconDownload v-if="slug === 'download'" />
+        <IconFill v-else />
 
         <!-- Title -->
         <span :class="$style.title">
-          <slot name="title" />
+          <ContentSlot :use="$slots.title" unwrap="p" />
         </span>
       </div>
     </button>
 
     <div :class="$style.description" @click.stop>
-      <slot name="description" />
+      <ContentSlot :use="$slots.description" />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps(['slug'])
+</script>
 
 <style lang="scss" module>
   .container {
