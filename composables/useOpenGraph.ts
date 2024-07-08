@@ -51,6 +51,7 @@ export async function useOpenGraph() {
   // Defaults
   useHead({
     ...page.value.head,
+    title: page.value.title,
     htmlAttrs: {
       ...page.value.head?.htmlAttrs,
       lang: 'ru'
