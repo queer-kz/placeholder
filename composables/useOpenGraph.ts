@@ -75,7 +75,7 @@ export async function useOpenGraph() {
 
       // OG: Twitter
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:domain', content: 'queer.kz' },
+      { name: 'twitter:domain', content: 'Queer.kz' },
       { name: 'twitter:url', content: canonicalUrl },
       { name: 'twitter:title', content: page.value.title },
       { name: 'twitter:description', content: page.value.description },
