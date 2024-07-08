@@ -49,7 +49,7 @@ export async function useOpenGraph() {
   socialBanner = formatLink(socialBanner)
 
   // Defaults
-  page.value.head = {
+  const head: Parameters<typeof useHead>[0] = {
     ...page.value.head,
     htmlAttrs: {
       ...page.value.head?.htmlAttrs,
@@ -64,25 +64,27 @@ export async function useOpenGraph() {
     },
     link: [
       ...(page.value.head?.link || []),
-      { rel: 'canonical', href: canonicalUrl },
-      ...alternative.map(([lang, href]) => ({ rel: 'alternate', hreflang: lang, href: formatLink(href) }))
+      { rel: 'canonical', id: 'canonical', href: canonicalUrl },
+      ...alternative.map(([lang, href]) => ({ rel: 'alternate', hreflang: lang, id: lang, href: formatLink(href) }))
     ],
     meta: [
       ...(page.value.head?.meta || []),
       // OG: Meta
-      { property: 'og:site_name', content: 'Queer.kz' },
-      { property: 'og:type', content: 'article' },
+      { property: 'og:site_name', id: 'og:site_name', content: 'Queer.kz' },
+      { property: 'og:type',      id: 'og:type',      content: 'article' },
 
       // OG: Twitter
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:domain', content: 'Queer.kz' },
-      { name: 'twitter:url', content: canonicalUrl },
-      { name: 'twitter:title', content: page.value.title },
-      { name: 'twitter:description', content: page.value.description },
-      { name: 'twitter:image', content: socialBanner },
-      { name: 'twitter:image:alt', content: page.value.title },
+      { name: 'twitter:card',        id: 'twitter:card',        content: 'summary_large_image' },
+      { name: 'twitter:domain',      id: 'twitter:domain',      content: 'Queer.kz' },
+      { name: 'twitter:url',         id: 'twitter:url',         content: canonicalUrl },
+      { name: 'twitter:title',       id: 'twitter:title',       content: page.value.title },
+      { name: 'twitter:description', id: 'twitter:description', content: page.value.description },
+      { name: 'twitter:image',       id: 'twitter:image',       content: socialBanner },
+      { name: 'twitter:image:alt',   id: 'twitter:image:alt',   content: page.value.title },
     ]
   }
+
+  page.value.head = head
 
   useContentHead(page)
 }
