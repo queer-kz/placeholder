@@ -5,16 +5,14 @@
       :alt="props.title"
       :class="$style.picture"
     />
-    <h4 :class="$style.title">
-      {{ props.title }}
-    </h4>
     <a
       :href="props.href"
-      :class="$style.link"
+      :class="[$style.link, $style.title]"
       target="_blank"
       rel="noopener noreferrer"
-      :aria-label="`Читать новость: ${props.title} на сайте`"
-    />
+    >
+      {{ props.title }}
+    </a>
   </article>
 </template>
 
@@ -60,14 +58,26 @@
   }
 
   .title {
-    margin-top: 10px;
+    margin-block-start: 10px;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+
+    color: var(--text-color);
+    text-decoration: none;
   }
 
   .link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 </style>
