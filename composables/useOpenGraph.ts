@@ -54,7 +54,7 @@ export async function useOpenGraph() {
     title: page.value.title,
     htmlAttrs: {
       ...page.value.head?.htmlAttrs,
-      lang: 'ru'
+      lang
     },
     // OG: Image
     image: {
