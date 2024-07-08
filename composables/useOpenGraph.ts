@@ -49,7 +49,7 @@ export async function useOpenGraph() {
   socialBanner = formatLink(socialBanner)
 
   // Defaults
-  const head: Parameters<typeof useHead>[0] = {
+  useHead({
     ...page.value.head,
     htmlAttrs: {
       ...page.value.head?.htmlAttrs,
@@ -69,9 +69,20 @@ export async function useOpenGraph() {
     ],
     meta: [
       ...(page.value.head?.meta || []),
+
+      // OG: Image
+      { property: 'og:image',        id: 'og:image',        content: socialBanner },
+      { property: 'og:image:type',   id: 'og:image:type',   content: 'image/png' },
+      { property: 'og:image:width',  id: 'og:image:width',  content: '1200' },
+      { property: 'og:image:height', id: 'og:image:height', content: '630' },
+
       // OG: Meta
-      { property: 'og:site_name', id: 'og:site_name', content: 'Queer.kz' },
-      { property: 'og:type',      id: 'og:type',      content: 'article' },
+      { property: 'og:url',         id: 'og:url',         content: canonicalUrl },
+      { property: 'og:title',       id: 'og:title',       content: page.value.title },
+      { property: 'og:description', id: 'og:description', content: page.value.description },
+      { property: 'og:locale',      id: 'og:locale',      content: lang },
+      { property: 'og:site_name',   id: 'og:site_name',   content: 'Queer.kz' },
+      { property: 'og:type',        id: 'og:type',        content: 'article' },
 
       // OG: Twitter
       { name: 'twitter:card',        id: 'twitter:card',        content: 'summary_large_image' },
@@ -82,9 +93,5 @@ export async function useOpenGraph() {
       { name: 'twitter:image',       id: 'twitter:image',       content: socialBanner },
       { name: 'twitter:image:alt',   id: 'twitter:image:alt',   content: page.value.title },
     ]
-  }
-
-  page.value.head = head
-
-  useContentHead(page)
+  })
 }
