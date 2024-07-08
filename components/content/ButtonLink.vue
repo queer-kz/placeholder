@@ -1,16 +1,50 @@
 <template>
-  <NuxtLink :to="to" :class="$style.container">
-    <IconFill />
-    <span>{{ title }}</span>
-  </NuxtLink>
+  <div :class="sticky ? $style.sticky : ''">
+    <NuxtLink :to="to" :class="$style.inner">
+      <IconFill />
+      <span :class="$style.title">{{ title }}</span>
+    </NuxtLink>
+  </div>
 </template>
 
 <script setup>
-defineProps(['to', 'title'])
+defineProps(['to', 'title', 'sticky'])
 </script>
 
 <style lang="scss" module>
-  .container {
+  @media (max-width: 948px) {
+    .sticky {
+      position: sticky;
+      bottom: 0px;
+      display: block;
+      backdrop-filter: blur(8px);
+      margin-top: -14px;
+      margin: -14px -14px -14px -14px;
+      padding: 14px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: var(--main-background);
+        opacity: 0.8;
+      }
+
+      .inner {
+        width: calc(100% - 28px);
+      }
+      
+      .title {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .inner {
     position: relative;
     display: inline-flex;
     align-items: center;
