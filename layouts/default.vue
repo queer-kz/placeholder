@@ -3,15 +3,15 @@
   <Nav />
 
   <!-- Content -->
-  <div :class="$style.inner">
+  <main :class="$style.inner">
 
-    <main :class="$style.main">
+    <article :class="$style.main">
       <NavigationSwitchLocale v-if="localeSwitcher" :slug="localeSwitcher" />
       <slot />
-    </main>
+    </article>
 
     <Socials v-if="withPress" :class="$style.news" />
-  </div>
+  </main>
 
   <!-- Footer -->
   <Footer />
