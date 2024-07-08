@@ -11,6 +11,7 @@
   --border-color: #d6d6d6;
   --primary-color: #e66199;
   --fk-color-primary: #e66199;
+  --link-color: #8b104e;
 
   font-family: 'Rubik', sans-serif;
   background-color: var(--main-background);
@@ -23,9 +24,10 @@
     --divider-color: #757575;
     --border-color: #e9e9e9;
     --primary-color: #fd94b3;
+    --link-color: #fd94b3;
   }
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--link-color);
 }
