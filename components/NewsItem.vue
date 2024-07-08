@@ -10,6 +10,8 @@
       :class="[$style.link, $style.title]"
       target="_blank"
       rel="noopener noreferrer"
+      role="heading"
+      aria-level="2"
     >
       {{ props.title }}
     </a>
