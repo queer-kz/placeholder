@@ -54,7 +54,7 @@ export async function useOpenGraph() {
     title: page.value.title,
     htmlAttrs: {
       ...page.value.head?.htmlAttrs,
-      lang
+      lang,
     },
     // OG: Image
     image: {
@@ -70,6 +70,7 @@ export async function useOpenGraph() {
     ],
     meta: [
       ...(page.value.head?.meta || []),
+      { name: 'description', id: 'description', content: page.value.description },
 
       // OG: Image
       { property: 'og:image',        id: 'og:image',        content: socialBanner },
