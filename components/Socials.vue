@@ -45,14 +45,14 @@
         <template v-else>Организации</template>
       </h2>
       <OrganizationItem
+        title="Feminita"
+        :poster="feminita"
+        href="https://taplink.cc/feminita?utm_source=queer.kz"
+      />
+      <OrganizationItem
         title="AmanBol"
         :poster="amanBol"
         href="https://amanbol.kz/?utm_source=queer.kz"
-      />
-      <OrganizationItem
-        title="RSide"
-        :poster="rside"
-        href="https://www.instagram.com/r.side_astana/?utm_source=queer.kz"
       />
       <OrganizationItem
         title="Education Community"
@@ -60,9 +60,9 @@
         href="https://www.instagram.com/edu.community.kz/?utm_source=queer.kz"
       />
       <OrganizationItem
-        title="Feminita"
-        :poster="feminita"
-        href="https://taplink.cc/feminita?utm_source=queer.kz"
+        title="RSide"
+        :poster="rside"
+        href="https://www.instagram.com/r.side_astana/?utm_source=queer.kz"
       />
     </section>
 
