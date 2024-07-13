@@ -11,6 +11,7 @@ import ogHomeLt from '~/assets/social/og:home:lt.png'
 import ogHomeEn from '~/assets/social/og:home:en.png'
 import ogPetitionRu from '~/assets/social/og:petition:ru.png'
 import shareAvatar from '~/assets/social/share:avatar.png'
+import shareAvatarTransparent from '~/assets/social/share:avatar:transparent.png'
 import shareLogo from '~/assets/social/share:logo.png'
 import storyHomeRu from '~/assets/social/story:home:ru.png'
 import storyPetitionRu from '~/assets/social/story:petition:ru.png'
@@ -44,6 +45,8 @@ const src = computed(() => {
       return shareAvatar
     case 'share:logo':
       return shareLogo
+    case 'share:avatar:transparent':
+      return shareAvatarTransparent
     case 'story:home:ru':
       return storyHomeRu
     case 'story:petition:ru':

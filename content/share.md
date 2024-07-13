@@ -29,4 +29,6 @@ withPress: true
 
 :share-item{title="Аватар" slug="share:avatar" lang="ru"}
 
+:share-item{title="Аватар (без фона)" slug="share:avatar:transparent" lang="ru"}
+
 :share-item{title="Логотип" slug="share:logo" lang="ru"}
