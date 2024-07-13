@@ -1,6 +1,6 @@
 ---
 slug: 'home:en'
-title: 'We are against the petition "On banning LGBT+ propaganda in Kazakhstan"'
+title: 'We are against the petition “On banning LGBT+ propaganda in Kazakhstan”'
 description: 'The petition violates Kazakhstan’s national legislation and international commitments and should be withdrawn from consideration.'
 withLocaleSwitcher: 'home:en'
 withPress: true
