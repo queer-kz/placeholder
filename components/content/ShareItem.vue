@@ -1,5 +1,5 @@
 <template>
-  <a :href="src" download="queer-banner.png" :class="$style.item" :lang="lang">
+  <a :href="src" :download="fileName" :class="$style.item" :lang="lang">
     <img :src="src" :alt="title" :class="$style.preview" />
     <span :class="$style.title">{{ title }}</span>
   </a>
@@ -54,6 +54,12 @@ const src = computed(() => {
     default:
       throw new Error("Unknown slug");
   }
+})
+
+const fileName = computed(() => {
+  const ext = src.value.split('.').pop()
+  const name = props.slug.split(':').join('_')
+  return `${name}.${ext}`
 })
 </script>
 
