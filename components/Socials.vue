@@ -12,6 +12,14 @@
         <template v-else>Пресса</template>
       </h2>
 
+      <!-- The Village -->
+      <NewsItem
+        lang="ru"
+        title="Петиция о запрете «пропаганды ЛГБТ»: Как прошло второе заседание рабочей группы"
+        :poster="theVillage"
+        href="https://www.the-village-kz.com/village/city/news-city/36633-petitsiya-o-zaprete-propagandy-lgbt-kak-proshlo-vtoroe-zasedanie-rabochey-gruppy?utm_source=queer.kz"
+      />
+
       <!-- Парни ПЛЮС -->
       <NewsItem
         lang="ru"
@@ -76,6 +84,7 @@
 <script lang="ts" setup>
 import orda from '~/assets/press/orda.jpg'
 import parniPlus from '~/assets/press/parni-plus.png'
+import theVillage from '~/assets/press/the-village.jpg'
 import amanBol from '~/assets/organizations/aman-bol.png'
 import rside from '~/assets/organizations/rside.png'
 import eduCommunity from '~/assets/organizations/edu-community.png'
