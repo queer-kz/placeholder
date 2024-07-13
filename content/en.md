@@ -6,7 +6,7 @@ withLocaleSwitcher: 'home:en'
 withPress: true
 ---
 
-# We are against the petition "On banning LGBT+ propaganda in Kazakhstan"
+# We are against the petition “On banning LGBT+ propaganda in Kazakhstan”
 
 The petition violates Kazakhstan’s national legislation and international commitments and should be withdrawn from consideration.
 
