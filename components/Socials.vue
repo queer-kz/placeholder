@@ -12,6 +12,14 @@
         <template v-else>Пресса</template>
       </h2>
 
+      <!-- The Village (Second) -->
+      <NewsItem
+        lang="ru"
+        title="В Астане пройдет публичное обсуждение петиции против «ЛГБТ-пропаганды в Казахстане»"
+        :poster="theVillageSecond"
+        href="https://www.instagram.com/p/C-CZHMHoXov/?utm_source=queer.kz"
+      />
+
       <!-- The Village -->
       <NewsItem
         lang="ru"
@@ -85,6 +93,7 @@
 import orda from '~/assets/press/orda.jpg'
 import parniPlus from '~/assets/press/parni-plus.png'
 import theVillage from '~/assets/press/the-village.jpg'
+import theVillageSecond from '~/assets/press/the-village-second.jpg'
 import amanBol from '~/assets/organizations/aman-bol.png'
 import rside from '~/assets/organizations/rside.png'
 import eduCommunity from '~/assets/organizations/edu-community.png'
