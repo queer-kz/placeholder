@@ -12,6 +12,14 @@
         <template v-else>Пресса</template>
       </h2>
 
+      <!-- United Nations -->
+      <NewsItem
+        lang="en"
+        title="Kazakhstan: Reject rights-violating petition, say UN experts"
+        :poster="unitedNations"
+        href="https://www.ohchr.org/en/press-releases/2024/07/kazakhstan-reject-rights-violating-petition-say-un-experts"
+      />
+
       <!-- The Village (Second) -->
       <NewsItem
         lang="ru"
@@ -94,6 +102,7 @@ import orda from '~/assets/press/orda.jpg'
 import parniPlus from '~/assets/press/parni-plus.png'
 import theVillage from '~/assets/press/the-village.jpg'
 import theVillageSecond from '~/assets/press/the-village-second.jpg'
+import unitedNations from '~/assets/press/united-nations.png'
 import amanBol from '~/assets/organizations/aman-bol.png'
 import rside from '~/assets/organizations/rside.png'
 import eduCommunity from '~/assets/organizations/edu-community.png'
