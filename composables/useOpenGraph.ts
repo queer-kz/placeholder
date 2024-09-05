@@ -1,7 +1,4 @@
 import ogHomeRu from '~/assets/social/og:home:ru.png'
-import ogHomeEn from '~/assets/social/og:home:en.png'
-import ogHomeLt from '~/assets/social/og:home:lt.png'
-import ogPetitionRu from '~/assets/social/og:petition:ru.png'
 
 
 export async function useOpenGraph() {
@@ -16,33 +13,6 @@ export async function useOpenGraph() {
   // Defaults
   let socialBanner = ogHomeRu
   let lang = 'ru'
-
-  // Page specific
-  switch (page.value.slug) {
-    case 'home:ru':
-      alternative.push(['en', '/en'], ['lt', '/lt'])
-      socialBanner = ogHomeRu
-      break;
-
-    case 'home:en':
-      alternative.push(['ru', '/ru'], ['lt', '/lt'])
-      socialBanner = ogHomeEn
-      lang = 'en'
-      break;
-
-    case 'home:lt':
-      alternative.push(['ru', '/ru'], ['en', '/en'])
-      socialBanner = ogHomeLt
-      lang = 'lt'
-      break;
-
-    case 'petition:ru':
-      socialBanner = ogPetitionRu
-      break;
-
-    default:
-      console.warn('No Open Graph image for this page')
-  }
 
   // URL's
   const canonicalUrl = formatLink(route.path)

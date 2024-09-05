@@ -4,13 +4,9 @@
 
   <!-- Content -->
   <main :class="$style.inner">
-
     <article :class="$style.main">
-      <NavigationSwitchLocale v-if="localeSwitcher" :slug="localeSwitcher" />
       <slot />
     </article>
-
-    <Socials v-if="withPress" :class="$style.news" />
   </main>
 
   <!-- Footer -->
