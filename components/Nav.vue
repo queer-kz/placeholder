@@ -10,10 +10,10 @@
   .container {
     display: flex;
     align-items: center;
-    height: 62px;
+    height: 128px;
     padding-top: 2px;
-    margin-bottom: 12px;
-    border-bottom: var(--divider-color) 1px solid;
+    margin-bottom: 36px;
+    border-bottom: var(--divider-color) 0px solid;
   }
 
   .logo {

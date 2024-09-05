@@ -18,21 +18,32 @@
     user-select: none;
     text-decoration: none;
     color: var(--text-color);
+    margin-top: 60px;
   }
 
   .inner {
     font-size: 22px;
     line-height: 22px;
     font-weight: 500;
+
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
   .img {
     display: flex;
-    width: 48px;
-    height: 48px;
+    width: 128px;
+    height: 128px;
     overflow: hidden;
-    border-radius: 32px;
-    background-color: #FF93B3;
 
     img {
       border: none;

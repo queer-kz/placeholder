@@ -45,4 +45,8 @@ const withPress = computed(() => !!page.value?.withPress)
       width: 100%;
     }
   }
+
+  :global(h1) {
+    text-align: center;
+  }
 </style>
